@@ -13,10 +13,20 @@ defineComponent({
 </script>
 
 <style scoped lang="scss">
-$containerPadding: calc(50% - 1200px / 2);
-
+$containerWidth: 1200px;
+// Отступы определяются по формуле. Вместе задают ширину контейнера
+$containerPadding: calc(50% - $containerWidth / 2);
 .container {
   padding-left: $containerPadding;
   padding-right: $containerPadding;
+}
+
+$smallScreenContainerPadding: 8px;
+// Задание отступов контейнера в случае, если ширина экрана <= ширине контейнера
+@media (max-width: calc($containerWidth + $smallScreenContainerPadding * 2)) {
+  .container {
+    padding-left: $smallScreenContainerPadding;
+    padding-right: $smallScreenContainerPadding;
+  }
 }
 </style>
