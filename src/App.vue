@@ -25,6 +25,10 @@ defineComponent({
   font-family: 'Roboto', sans-serif, Helvetica;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

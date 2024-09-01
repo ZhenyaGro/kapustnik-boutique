@@ -3,11 +3,7 @@
     <div class="header__content">
       <a href="#"><img src="/img/logo/logoWithBigTextWhite.svg" class="logo" alt="Логотип" /></a>
       <nav class="navbar">
-        <a href="#" class="navbar__link">Главная</a>
-        <a href="#" class="navbar__link">Ассортимент</a>
-        <a href="#" class="navbar__link">Отзывы</a>
-        <a href="#" class="navbar__link">Как заказать</a>
-        <a href="#" class="navbar__link">Контакты</a>
+        <a v-for="(item, index) in pageLinks" :key="index" :href="item.url" class="navbar__link">{{ item.text }}</a>
       </nav>
       <a class="navbar__link" href="tel:+79212733414">+7&nbsp;(921)&nbsp;273-34-14</a>
     </div>
@@ -17,6 +13,7 @@
 <script setup>
 import { defineComponent } from 'vue';
 import Container from '@/layouts/Container.vue';
+import { pageLinks } from '@/constants/pageLinks';
 
 defineComponent({
   name: 'Header',
