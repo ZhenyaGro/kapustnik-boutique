@@ -1,7 +1,7 @@
 <template>
   <Container class="header">
     <div class="header__content">
-      <a href="#"><img src="/img/logoWithBigTextWhite.svg" class="logo" alt="Логотип" /></a>
+      <a href="#"><img src="/img/logo/logoWithBigTextWhite.svg" class="logo" alt="Логотип" /></a>
       <nav class="navbar">
         <a href="#" class="navbar__link">Главная</a>
         <a href="#" class="navbar__link">Ассортимент</a>
@@ -9,7 +9,7 @@
         <a href="#" class="navbar__link">Как заказать</a>
         <a href="#" class="navbar__link">Контакты</a>
       </nav>
-      <a href="tel:+79212733414">+7 (921) 273-34-14</a>
+      <a class="navbar__link" href="tel:+79212733414">+7&nbsp;(921)&nbsp;273-34-14</a>
     </div>
   </Container>
 </template>
@@ -30,6 +30,10 @@ defineComponent({
 @use '@/styles/colors';
 
 .header {
+  position: fixed;
+  top: 0;
+
+  width: 100%;
   background: -webkit-linear-gradient(
     90deg,
     colors.$additionalColor,
@@ -47,6 +51,7 @@ defineComponent({
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 18px;
 
     a {
       color: white;
@@ -63,7 +68,7 @@ defineComponent({
       &__link {
         display: block;
         padding: 38px 12px;
-        transition: background-color 0.2s;
+        transition: background-color 0.3s;
 
         &:hover {
           background-color: colors.$additionalColor;
