@@ -1,7 +1,7 @@
 <template>
   <Container class="header">
     <div class="header__content">
-      <a href="#"><img src="/img/logo/logoWithBigTextWhite.svg" class="logo" alt="Логотип" /></a>
+      <router-link to="/"><img src="/img/logo/logoWithBigTextWhite.svg" class="logo" alt="Логотип" /></router-link>
       <nav class="navbar">
         <a v-for="(item, index) in pageLinks" :key="index" :href="item.url" class="navbar__link">{{ item.text }}</a>
       </nav>
