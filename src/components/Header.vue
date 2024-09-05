@@ -29,6 +29,7 @@ defineComponent({
 .header {
   position: fixed;
   top: 0;
+  z-index: 10;
 
   width: 100%;
   background: -webkit-linear-gradient(
