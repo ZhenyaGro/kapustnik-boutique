@@ -21,7 +21,7 @@ $containerPadding: calc(50% - $containerWidth / 2);
   padding-right: $containerPadding;
 }
 
-$smallScreenContainerPadding: 8px;
+$smallScreenContainerPadding: 16px;
 // Задание отступов контейнера в случае, если ширина экрана <= ширине контейнера
 @media (max-width: calc($containerWidth + $smallScreenContainerPadding * 2)) {
   .container {
