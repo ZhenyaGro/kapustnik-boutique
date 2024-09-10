@@ -5,12 +5,16 @@
       <h1>Магазин модной женской одежды больших размеров со стразами</h1>
     </section>
   </Container>
-  <Container :id="pageLinks.start.id">
-    <a :href="pageLinks.products.url" class="start-content">
-      <img src="/img/photos/model1.jpeg" alt="Фото модель" />
-      <img src="/img/photos/model2.jpeg" alt="Фото модель" />
-      <img src="/img/photos/shop.jpg" alt="Интерьер магазина" />
-    </a>
+  <Container :id="pageLinks.start.id" class="start-content">
+    <a :href="pageLinks.products.url" class="start-content__link"
+      ><img class="start-content__img" src="/img/photos/model1.jpeg" alt="Фото модель"
+    /></a>
+    <a :href="pageLinks.products.url" class="start-content__link"
+      ><img class="start-content__img" src="/img/photos/model2.jpeg" alt="Фото модель"
+    /></a>
+    <a :href="pageLinks.contacts.url" class="start-content__link"
+      ><img class="start-content__img" src="/img/photos/shop.jpg" alt="Интерьер магазина"
+    /></a>
   </Container>
 </template>
 
@@ -64,13 +68,13 @@ defineComponent({
   gap: 20px;
   width: 100%;
 
-  img {
+  &__img {
     width: 100%;
     height: auto;
     border-radius: 36px;
   }
 
-  img:nth-child(3) {
+  &__link:nth-child(3) {
     grid-column: 1 / 3;
   }
 }
