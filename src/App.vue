@@ -22,7 +22,7 @@ defineComponent({
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif, Helvetica;
+  font-family: 'San Francisco', sans-serif, Helvetica;
 }
 
 html {
@@ -41,6 +41,7 @@ h1 {
 }
 
 .heading {
+  margin-top: 60px;
   text-transform: uppercase;
 }
 </style>
