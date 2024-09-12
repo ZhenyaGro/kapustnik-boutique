@@ -1,27 +1,21 @@
 <template>
-  <Container
-    ><section class="start-page">
-      <img src="/img/logo/logoWithText.svg" class="start-page__logo" alt="Логотип" />
-      <h1>Магазин модной женской одежды больших размеров со стразами</h1>
+  <Container class="main-container"
+    ><section class="main-content">
+      <div class="logo-wrapper">
+        <img src="/img/logo/logoWithTextWhite.svg" class="logo-wrapper__logo" alt="Логотип" />
+        <h1>Магазин модной женской одежды больших размеров со стразами</h1>
+        <img class="circle circle_left" src="/img/layout/circle_light.svg" alt="Круг" />
+        <img class="circle circle_right" src="/img/layout/circle_light.svg" alt="Круг" />
+      </div>
+      <img class="circle-half circle-half_left" src="/img/layout/circle_half.svg" />
+      <img class="circle-half circle-half_right" src="/img/layout/circle_half.svg" />
     </section>
-  </Container>
-  <Container :id="pageLinks.start.id" class="start-content">
-    <a :href="pageLinks.products.url" class="start-content__link"
-      ><img class="start-content__img" src="/img/photos/model1.jpeg" alt="Фото модель"
-    /></a>
-    <a :href="pageLinks.products.url" class="start-content__link"
-      ><img class="start-content__img" src="/img/photos/model2.jpeg" alt="Фото модель"
-    /></a>
-    <a :href="pageLinks.contacts.url" class="start-content__link"
-      ><img class="start-content__img" src="/img/photos/shop.jpg" alt="Интерьер магазина"
-    /></a>
   </Container>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { defineComponent } from 'vue';
 import Container from '@/layouts/Container.vue';
-import { pageLinks } from '@/constants/pageLinks';
 
 defineComponent({
   name: 'StartPage',
@@ -34,57 +28,86 @@ defineComponent({
 <style lang="scss" scoped>
 @use '@/styles/colors';
 
-.start-page {
-  min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-
-  &__logo {
-    max-width: 600px;
-    opacity: 0;
-    animation: 3s show ease;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
+.main {
+  &-container {
+    position: relative;
+    background-color: colors.$brandColor;
+    overflow: hidden;
+    // background: linear-gradient(to bottom, colors.$brandColor 92%, white); // Плавный переход к белому в нижней части
   }
 
-  h1 {
-    max-width: 1030px;
-    opacity: 0;
-    font-weight: 400;
-    color: black;
-    animation: 3s show ease;
-    animation-delay: 1.5s;
-    animation-fill-mode: forwards;
-  }
-}
+  &-content {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, colors.$additionalColor 0%, colors.$brandColor 50%);
 
-.start-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto auto;
-  gap: 20px;
-  width: 100%;
+    .logo-wrapper {
+      position: relative;
 
-  &__img {
-    width: 100%;
-    height: auto;
-    border-radius: 36px;
-  }
+      &__logo {
+        max-width: 600px;
+        opacity: 0;
+        animation: 3s show ease;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+        transition: transform 0.5s;
+        z-index: 10;
 
-  &__link:nth-child(3) {
-    grid-column: 1 / 3;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      .circle {
+        position: absolute;
+        width: 50%;
+        min-width: 350px;
+        max-width: 600px;
+
+        &_left {
+          bottom: -35%;
+          left: -10%;
+        }
+
+        &_right {
+          top: -35%;
+          right: -10%;
+        }
+      }
+    }
+
+    h1 {
+      margin-top: 10px;
+      max-width: 1030px;
+      opacity: 0;
+      font-weight: 400;
+      color: white;
+      animation: 3s show ease;
+      animation-delay: 1.5s;
+      animation-fill-mode: forwards;
+    }
+
+    .circle-half {
+      position: absolute;
+      max-width: 200px;
+
+      &_left {
+        left: -37px;
+      }
+
+      &_right {
+        transform: rotate(180deg);
+        right: -37px;
+      }
+    }
   }
 }
 
 img {
-  transition: transform 0.5s;
-
-  &:hover {
-    transform: scale(1.05);
-  }
+  user-select: none;
 }
 
 @keyframes show {
