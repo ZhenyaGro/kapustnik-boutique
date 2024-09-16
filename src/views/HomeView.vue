@@ -26,7 +26,9 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+@use '@/styles/variables';
+
 .home {
-  padding-top: 97px; // Header height
+  padding-top: variables.$headerHeight;
 }
 </style>

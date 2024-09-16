@@ -30,6 +30,8 @@ defineComponent({
 
 <style lang="scss" scoped>
 @use '@/styles/colors';
+@use '@/styles/variables';
+
 .test {
   position: absolute;
   width: 200px;
@@ -45,7 +47,7 @@ defineComponent({
   }
 
   &-content {
-    min-height: calc(100dvh - 97px); // Полная высота - высота Header
+    min-height: calc(100dvh - variables.$headerHeight);
     display: flex;
     flex-direction: column;
     justify-content: center;
