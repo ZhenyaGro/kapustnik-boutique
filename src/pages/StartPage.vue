@@ -1,11 +1,12 @@
 <template>
-  <Container class="main-container"
-    ><section class="main-content">
+  <Container class="main-container">
+    <LinesEffect />
+    <section class="main-content">
       <div class="logo-wrapper">
         <img src="/img/logo/logoWithTextWhite.svg" class="logo-wrapper__logo" alt="Логотип" />
         <h1>Магазин модной женской одежды больших размеров со стразами</h1>
-        <img class="circle circle_left" src="/img/layout/circle_light.svg" alt="Круг" />
-        <img class="circle circle_right" src="/img/layout/circle_light.svg" alt="Круг" />
+        <img class="circle circle_left" src="/img/layout/circle_light.svg" alt="Элемент страницы. Круг" />
+        <img class="circle circle_right" src="/img/layout/circle_light.svg" alt="Элемент страницы. Круг" />
       </div>
       <img class="circle-half circle-half_left" src="/img/layout/circle_half.svg" />
       <img class="circle-half circle-half_right" src="/img/layout/circle_half.svg" />
@@ -16,17 +17,23 @@
 <script setup lang="ts">
 import { defineComponent } from 'vue';
 import Container from '@/layouts/Container.vue';
+import LinesEffect from '@/components/LinesEffect.vue';
 
 defineComponent({
   name: 'StartPage',
   components: {
     Container,
+    LinesEffect,
   },
 });
 </script>
 
 <style lang="scss" scoped>
 @use '@/styles/colors';
+.test {
+  position: absolute;
+  width: 200px;
+}
 
 .main {
   &-container {
@@ -38,7 +45,7 @@ defineComponent({
   }
 
   &-content {
-    min-height: 100dvh;
+    min-height: calc(100dvh - 97px); // Полная высота - высота Header
     display: flex;
     flex-direction: column;
     justify-content: center;
