@@ -22,6 +22,7 @@ defineComponent({
   max-width: 200px;
   position: absolute;
   animation: floating 4s infinite linear;
+  user-select: none;
 
   &_1 {
     top: 5%;
