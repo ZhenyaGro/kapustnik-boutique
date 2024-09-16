@@ -50,7 +50,7 @@ defineComponent({
       &__logo {
         max-width: 600px;
         opacity: 0;
-        animation: 3s show ease;
+        animation: 3s showFromOpacity ease;
         animation-delay: 0.5s;
         animation-fill-mode: forwards;
         transition: transform 0.5s;
@@ -70,11 +70,15 @@ defineComponent({
         &_left {
           bottom: -35%;
           left: -10%;
+          animation: 3s showLeftRoll ease;
+          animation-fill-mode: forwards;
         }
 
         &_right {
           top: -35%;
           right: -10%;
+          animation: 3s showRightRoll ease;
+          animation-fill-mode: forwards;
         }
       }
     }
@@ -85,7 +89,7 @@ defineComponent({
       opacity: 0;
       font-weight: 400;
       color: white;
-      animation: 3s show ease;
+      animation: 3s showFromOpacity ease;
       animation-delay: 1.5s;
       animation-fill-mode: forwards;
     }
@@ -110,7 +114,21 @@ img {
   user-select: none;
 }
 
-@keyframes show {
+@keyframes showLeftRoll {
+  from {
+    bottom: -130%;
+    left: -130%;
+  }
+}
+
+@keyframes showRightRoll {
+  from {
+    top: -130%;
+    right: -130%;
+  }
+}
+
+@keyframes showFromOpacity {
   from {
     opacity: 0;
   }
