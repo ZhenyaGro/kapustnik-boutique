@@ -33,6 +33,7 @@ defineComponent({
     position: relative;
     background-color: colors.$brandColor;
     overflow: hidden;
+    box-shadow: 0 -50px 0px #d8a760;
     // background: linear-gradient(to bottom, colors.$brandColor 92%, white); // Плавный переход к белому в нижней части
   }
 
