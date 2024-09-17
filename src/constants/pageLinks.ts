@@ -9,10 +9,10 @@ export const pageLinks = {
     url: '#products',
     text: 'Ассортимент',
   },
-  reviews: {
-    id: 'reviews',
-    url: '#reviews',
-    text: 'Отзывы',
+  brands: {
+    id: 'brands',
+    url: '#brands',
+    text: 'Бренды',
   },
   order: {
     id: 'order',
