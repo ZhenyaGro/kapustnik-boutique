@@ -1,5 +1,5 @@
 <template>
-  <Container class="main-container">
+  <Container :id="pageLinks.start.id" class="main-container">
     <LinesEffect />
     <section class="main-content">
       <div class="logo-wrapper">
@@ -18,6 +18,7 @@
 import { defineComponent } from 'vue';
 import Container from '@/layouts/Container.vue';
 import LinesEffect from '@/components/LinesEffect.vue';
+import { pageLinks } from '@/constants/pageLinks';
 
 defineComponent({
   name: 'StartPage',
