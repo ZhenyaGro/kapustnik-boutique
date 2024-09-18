@@ -30,20 +30,13 @@ defineComponent({
   position: fixed;
   top: 0;
   z-index: 10;
-
   width: 100%;
-  background: -webkit-linear-gradient(
-    90deg,
-    colors.$additionalColor,
-    colors.$brandColor,
-    colors.$additionalColor
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(colors.$additionalColor, colors.$brandColor); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-    90deg,
     colors.$additionalColor,
-    colors.$brandColor,
-    colors.$additionalColor
+    colors.$brandColor
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
 
   .header__content {
     display: flex;
