@@ -4,12 +4,10 @@
     <section class="main-content">
       <div class="logo-wrapper">
         <img src="/img/logo/logoWithTextWhite.svg" class="logo-wrapper__logo" alt="Логотип" />
-        <h1>Магазин модной женской одежды больших размеров со стразами</h1>
+        <h1>Магазин модной женской одежды больших&nbsp;размеров со стразами</h1>
         <img class="circle circle_left" src="/img/layout/circle_light.svg" alt="Элемент страницы. Круг" />
         <img class="circle circle_right" src="/img/layout/circle_light.svg" alt="Элемент страницы. Круг" />
       </div>
-      <img class="circle-half circle-half_left" src="/img/layout/circle_half.svg" />
-      <img class="circle-half circle-half_right" src="/img/layout/circle_half.svg" />
     </section>
   </Container>
 </template>
@@ -32,11 +30,6 @@ defineComponent({
 <style lang="scss" scoped>
 @use '@/styles/colors';
 @use '@/styles/variables';
-
-.test {
-  position: absolute;
-  width: 200px;
-}
 
 .main {
   &-container {
@@ -103,20 +96,6 @@ defineComponent({
       animation: 3s showFromOpacity ease;
       animation-delay: 1.5s;
       animation-fill-mode: forwards;
-    }
-
-    .circle-half {
-      position: absolute;
-      max-width: 200px;
-
-      &_left {
-        left: -37px;
-      }
-
-      &_right {
-        transform: rotate(180deg);
-        right: -37px;
-      }
     }
   }
 }
