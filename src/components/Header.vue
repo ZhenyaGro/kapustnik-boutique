@@ -1,5 +1,5 @@
 <template>
-  <Container class="header">
+  <Container :class="['header', { header_hidden: isHeaderHidden && !isMouseNearTop }]">
     <div class="header__content">
       <router-link to="/"><img src="/img/logo/logoWithBigTextWhite.svg" class="logo" alt="Логотип" /></router-link>
       <nav class="navbar">
@@ -10,8 +10,8 @@
   </Container>
 </template>
 
-<script setup>
-import { defineComponent } from 'vue';
+<script setup lang="ts">
+import { ref, defineComponent, onMounted, onBeforeUnmount } from 'vue';
 import Container from '@/layouts/Container.vue';
 import { pageLinks } from '@/constants/pageLinks';
 
@@ -20,6 +20,45 @@ defineComponent({
   components: {
     Container,
   },
+});
+
+const isHeaderHidden = ref(false);
+const isMouseNearTop = ref(false);
+let lastScrollY = 0;
+
+/**
+ * Анализирует направление скролла при прокрученной области вниз более чем на 100px для скрытия или показа Header
+ */
+const handleScroll = () => {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > lastScrollY && currentScrollY > 100) {
+    isHeaderHidden.value = true;
+  } else {
+    isHeaderHidden.value = false;
+  }
+
+  lastScrollY = currentScrollY;
+};
+
+/**
+ * Показывает Header при наведении курсором на верхнюю часть экрана (100px)
+ */
+const handleMouseMove = (event: MouseEvent) => {
+  if (event.clientY <= 100) {
+    isMouseNearTop.value = true;
+  } else {
+    isMouseNearTop.value = false;
+  }
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('mousemove', handleMouseMove);
+});
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', handleScroll);
+  window.removeEventListener('mousemove', handleMouseMove);
 });
 </script>
 
@@ -37,6 +76,11 @@ defineComponent({
     colors.$brandColor
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+  transition: top 0.5s ease;
+
+  &_hidden {
+    top: -100px;
+  }
 
   .header__content {
     display: flex;
