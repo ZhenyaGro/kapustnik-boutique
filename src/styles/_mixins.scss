@@ -1,0 +1,15 @@
+@use './colors';
+
+// Задает background gradient с возможностью добавить логотип и указать его размер
+@mixin backgroundGradientWithLogo($additionalColorPercentage: 0%, $mainColorPercentage: 50%, $logoSize: 0) {
+  $background-image: if($logoSize, "right 20px bottom 20px url('/public/img/logo/logoBackground.svg'),", '');
+  $background-gradient: radial-gradient(
+    circle,
+    colors.$additionalColor $additionalColorPercentage,
+    colors.$brandColor $mainColorPercentage
+  );
+
+  background: #{$background-image} #{$background-gradient};
+  background-repeat: no-repeat;
+  background-size: if($logoSize, $logoSize, auto), auto;
+}

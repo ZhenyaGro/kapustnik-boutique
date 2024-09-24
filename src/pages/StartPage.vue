@@ -30,6 +30,7 @@ defineComponent({
 <style lang="scss" scoped>
 @use '@/styles/colors';
 @use '@/styles/variables';
+@use '@/styles/mixins';
 
 .main {
   &-container {
@@ -46,7 +47,7 @@ defineComponent({
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle, colors.$additionalColor 0%, colors.$brandColor 50%);
+    @include mixins.backgroundGradientWithLogo();
 
     .logo-wrapper {
       position: relative;
