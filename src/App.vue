@@ -41,7 +41,7 @@ h1 {
 }
 
 .heading {
-  margin-top: 60px;
   text-transform: uppercase;
+  text-align: center;
 }
 </style>

@@ -10,9 +10,9 @@
       <div class="start-photos__img-container">
         <img class="start-photos__img" src="/img/photos/shop.jpg" alt="Интерьер магазина" />
         <TextBlock class="start-photos__text"
-          ><p>
-            НАШ МАГАЗИН ПРЕДЛАГАЕТ ЖЕНСКУЮ ОДЕЖДУ БОЛЬШИХ РАЗМЕРОВ ИТАЛЬЯНСКОГО, ТУРЕЦКОГО И КОРЕЙСКОГО ПРОИЗВОДСТВА,
-            СОЧЕТАЮЩУЮ В СЕБЕ КОМФОРТ И СТИЛЬ
+          ><p class="start-photos__text_uppercase">
+            Наш магазин предлагает женскую одежду больших размеров итальянского, турецкого и корейского производства,
+            сочетающую в себе комфорт и стиль
           </p>
           <p>
             Мы специализируемся на создании уникальных образов, украшенных стразами, которые придают изделиям роскошный
@@ -72,6 +72,10 @@ defineComponent({
         left: 0;
         top: 50%;
         transform: translateY(-50%);
+
+        &_uppercase {
+          text-transform: uppercase;
+        }
       }
     }
   }
