@@ -1,7 +1,13 @@
 <template>
   <div class="slider">
-    <div class="slider-wrapper" :style="wrapperStyles">
+    <div class="slider-wrapper" :style="wrapperStyles" @transitionend="handleTransitionEnd">
+      <div class="slider-item" v-for="(url, index) in cloneLastSlides" :key="'last-' + index">
+        <img :src="url" alt="изображение слайдера" />
+      </div>
       <div class="slider-item" v-for="(url, index) in props.photosUrls" :key="index">
+        <img :src="url" alt="изображение слайдера" />
+      </div>
+      <div class="slider-item" v-for="(url, index) in cloneFirstSlides" :key="'first-' + index">
         <img :src="url" alt="изображение слайдера" />
       </div>
     </div>
@@ -18,17 +24,49 @@ const props = defineProps<{
 }>();
 
 const visibleSlides = ref(3);
-const currentIndex = ref(0);
+const currentIndex = ref(visibleSlides.value);
 const totalSlides = props.photosUrls.length;
+const isTransitioning = ref(false);
+
+const cloneFirstSlides = computed(() => props.photosUrls.slice(0, visibleSlides.value));
+const cloneLastSlides = computed(() => props.photosUrls.slice(-visibleSlides.value));
 
 const nextSlide = () => {
-  currentIndex.value = (currentIndex.value + 1) % totalSlides;
+  if (!isTransitioning.value) {
+    isTransitioning.value = true;
+    currentIndex.value++;
+  }
   resetAutoSlide();
 };
 
 const prevSlide = () => {
-  currentIndex.value = (currentIndex.value - 1 + totalSlides) % totalSlides;
+  if (!isTransitioning.value) {
+    isTransitioning.value = true;
+    currentIndex.value--;
+  }
   resetAutoSlide();
+};
+
+const wrapperStyles = computed(() => ({
+  transform: `translateX(-${(currentIndex.value * 100) / visibleSlides.value}%)`,
+  transition: isTransitioning.value ? 'transform 0.5s ease' : 'none',
+}));
+
+/**
+ * Обработчик окончания анимации, контролирует переход за первый и последний слайд
+ */
+const handleTransitionEnd = () => {
+  isTransitioning.value = false;
+
+  // Если совершен переход за последний слайд, то возврат к первому
+  if (currentIndex.value === totalSlides + visibleSlides.value) {
+    currentIndex.value = visibleSlides.value;
+  }
+
+  // Если совершен переход за первый слайд, то возврат к последнему
+  if (currentIndex.value === 0) {
+    currentIndex.value = totalSlides;
+  }
 };
 
 /**
@@ -45,19 +83,6 @@ const updateVisibleSlides = () => {
   }
 };
 
-onMounted(() => {
-  updateVisibleSlides();
-  window.addEventListener('resize', updateVisibleSlides);
-});
-
-onBeforeUnmount(() => {
-  window.removeEventListener('resize', updateVisibleSlides);
-});
-
-const wrapperStyles = computed(() => ({
-  transform: `translateX(-${(currentIndex.value * 100) / visibleSlides.value}%)`,
-}));
-
 let autoSlideInterval: ReturnType<typeof setInterval> | null = null;
 const startAutoSlide = () => {
   autoSlideInterval = setInterval(() => {
@@ -72,18 +97,19 @@ const stopAutoSlide = () => {
 };
 
 const resetAutoSlide = () => {
-  if (autoSlideInterval) {
-    clearInterval(autoSlideInterval);
-  }
+  stopAutoSlide();
   startAutoSlide();
 };
 
 onMounted(() => {
+  updateVisibleSlides();
   startAutoSlide();
+  window.addEventListener('resize', updateVisibleSlides);
 });
 
 onBeforeUnmount(() => {
   stopAutoSlide();
+  window.removeEventListener('resize', updateVisibleSlides);
 });
 </script>
 
