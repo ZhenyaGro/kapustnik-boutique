@@ -1,4 +1,10 @@
-export const pageLinks = {
+interface PageLink {
+  id: string;
+  url: string;
+  text: string;
+}
+
+export const pageLinks: Record<string, PageLink> = {
   start: {
     id: 'start',
     url: '#start',
