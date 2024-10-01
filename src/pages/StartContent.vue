@@ -2,10 +2,10 @@
   <Container :id="pageLinks.start.id" class="start-content">
     <div class="start-photos">
       <a :href="pageLinks.products.url" class="start-photos__link"
-        ><img class="start-photos__img" src="/img/photos/model1.jpeg" alt="Фото модель"
+        ><img class="start-photos__img start-photos__img_scale" src="/img/photos/model1.jpeg" alt="Фото модель"
       /></a>
       <a :href="pageLinks.products.url" class="start-photos__link"
-        ><img class="start-photos__img" src="/img/photos/model2.jpeg" alt="Фото модель"
+        ><img class="start-photos__img start-photos__img_scale" src="/img/photos/model2.jpeg" alt="Фото модель"
       /></a>
       <div class="start-photos__img-container">
         <img class="start-photos__img" src="/img/photos/shop.jpg" alt="Интерьер магазина" />
@@ -55,6 +55,11 @@ defineComponent({
       gap: 20px;
       width: 100%;
 
+      &__link {
+        overflow: hidden;
+        border-radius: 36px;
+      }
+
       &__img-container {
         grid-column: 1 / 3;
         position: relative;
@@ -65,6 +70,12 @@ defineComponent({
         height: auto;
         border-radius: 36px;
         transition: transform 0.5s;
+
+        @media (hover: hover) {
+          &_scale:hover {
+            transform: scale(1.1);
+          }
+        }
       }
 
       &__text {
