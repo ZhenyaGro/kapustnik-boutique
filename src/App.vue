@@ -44,4 +44,9 @@ h1 {
   text-transform: uppercase;
   text-align: center;
 }
+
+a {
+  color: white;
+  text-decoration: none;
+}
 </style>

@@ -88,11 +88,6 @@ onBeforeUnmount(() => {
     align-items: center;
     font-size: 18px;
 
-    a {
-      color: white;
-      text-decoration: none;
-    }
-
     .logo {
       height: 80px;
     }
