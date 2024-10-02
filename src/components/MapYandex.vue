@@ -3,7 +3,7 @@
     <a
       href="https://yandex.ru/maps/org/kapustnik_butik/166263470601/?utm_medium=mapframe&utm_source=maps"
       style="color: #eee; font-size: 12px; position: absolute; top: 0px"
-      >Kapustnik Butik</a
+      >Капустник Бутик</a
     ><a
       href="https://yandex.ru/maps/2/saint-petersburg/category/plus_size_clothing/184107953/?utm_medium=mapframe&utm_source=maps"
       style="color: #eee; font-size: 12px; position: absolute; top: 14px"
