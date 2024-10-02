@@ -7,7 +7,7 @@ interface PageLink {
 export const pageLinks: Record<string, PageLink> = {
   start: {
     id: 'start',
-    url: '#start',
+    url: '#top',
     text: 'Главная',
   },
   products: {

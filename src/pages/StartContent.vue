@@ -1,5 +1,5 @@
 <template>
-  <Container :id="pageLinks.start.id" class="start-content">
+  <Container :id="pageLinks.start.id" class="start-content anchor">
     <div class="start-photos">
       <a :href="pageLinks.products.url" class="start-photos__link"
         ><img class="start-photos__img start-photos__img_scale" src="/img/photos/model1.jpeg" alt="Фото модель"

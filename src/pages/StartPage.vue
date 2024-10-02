@@ -1,5 +1,5 @@
 <template>
-  <Container :id="pageLinks.start.id" class="main-container">
+  <Container :id="pageLinks.start.id" class="main-container anchor">
     <LinesEffect />
     <section class="main-content">
       <div class="logo-wrapper">

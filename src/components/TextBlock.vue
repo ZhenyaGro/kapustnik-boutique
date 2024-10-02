@@ -17,7 +17,7 @@ defineComponent({
 
 .text-block {
   max-width: 800px;
-  padding: 40px;
+  padding: 40px 40px 80px;
   margin: 0 auto 30px;
   text-align: left;
   color: white;

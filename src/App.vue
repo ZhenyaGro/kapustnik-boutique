@@ -49,4 +49,12 @@ a {
   color: white;
   text-decoration: none;
 }
+
+address {
+  font-style: normal;
+}
+
+.anchor {
+  scroll-margin-top: 150px;
+}
 </style>
