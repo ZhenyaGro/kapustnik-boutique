@@ -91,6 +91,7 @@ h3 {
     height: 52px;
     transition: transform 0.3s;
     user-select: none;
+    vertical-align: middle;
 
     &:active {
       transform: scale(1.1);
