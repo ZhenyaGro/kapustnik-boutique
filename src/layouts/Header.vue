@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 import { ref, defineComponent, onMounted, onBeforeUnmount } from 'vue';
-import Container from '@/layouts/Container.vue';
+import Container from '@/components/Container.vue';
 import { pageLinks, PHONE_NUMBER } from '@/constants';
 
 defineComponent({
