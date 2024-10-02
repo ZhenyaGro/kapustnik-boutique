@@ -1,3 +1,5 @@
+import { PHONE_NUMBER } from './contactInfo';
+
 interface SocialMediaLink {
   url: string;
   text: string;
@@ -11,7 +13,7 @@ export const SOCIAL_MEDIA_LINKS: Record<string, SocialMediaLink> = {
     imgUrl: 'img/socialMedia/iconTelegram.png',
   },
   whatsapp: {
-    url: 'https://wa.me/+79212733414',
+    url: `https://wa.me/${PHONE_NUMBER.default}`,
     text: 'Whatsapp',
     imgUrl: 'img/socialMedia/iconWhatsapp.png',
   },
