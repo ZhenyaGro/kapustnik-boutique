@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 import { defineComponent } from 'vue';
-import Container from '@/layouts/Container.vue';
+import Container from '@/components/Container.vue';
 import LinesEffect from '@/components/LinesEffect.vue';
 import { pageLinks } from '@/constants';
 
@@ -93,7 +93,6 @@ defineComponent({
       max-width: 1030px;
       opacity: 0;
       font-weight: 400;
-      color: white;
       animation: 3s showFromOpacity ease;
       animation-delay: 1.5s;
       animation-fill-mode: forwards;

@@ -30,7 +30,7 @@
 
 <script setup lang="ts">
 import { defineComponent } from 'vue';
-import Container from '@/layouts/Container.vue';
+import Container from '@/components/Container.vue';
 import TextBlock from '@/components/TextBlock.vue';
 import { pageLinks } from '@/constants';
 

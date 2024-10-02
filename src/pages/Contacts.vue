@@ -42,7 +42,7 @@
 
 <script setup lang="ts">
 import { defineComponent } from 'vue';
-import Container from '@/layouts/Container.vue';
+import Container from '@/components/Container.vue';
 import TextBlock from '@/components/TextBlock.vue';
 import MapYandex from '@/components/MapYandex.vue';
 import { pageLinks, SOCIAL_MEDIA_LINKS, PHONE_NUMBER, EMAIL } from '@/constants';
