@@ -11,8 +11,12 @@
           Метро <span class="subway">Академическая</span><br />
           <strong>Время работы: </strong>С 10:00 до 22:00 каждый день
         </p>
-        <p><strong>Телефон: </strong><a href="tel:+79212733414">+7&nbsp;(921)&nbsp;273-34-14</a></p>
-        <p><strong>Email: </strong><a href="mailto:senichev260483@mail.ru">senichev260483@mail.ru</a></p>
+        <p>
+          <strong>Телефон: </strong><a :href="`tel:${PHONE_NUMBER.default}`">{{ PHONE_NUMBER.formatted }}</a>
+        </p>
+        <p>
+          <strong>Email: </strong><a :href="`mailto:${EMAIL}`">{{ EMAIL }}</a>
+        </p>
       </address>
       <section>
         <h3>Мы в социальных сетях:</h3>
@@ -39,10 +43,9 @@
 <script setup lang="ts">
 import { defineComponent } from 'vue';
 import Container from '@/layouts/Container.vue';
-import { pageLinks } from '@/constants/pageLinks';
 import TextBlock from '@/components/TextBlock.vue';
-import { SOCIAL_MEDIA_LINKS } from '@/constants/socialMediaLinks';
 import MapYandex from '@/components/MapYandex.vue';
+import { pageLinks, SOCIAL_MEDIA_LINKS, PHONE_NUMBER, EMAIL } from '@/constants';
 
 defineComponent({
   name: 'Contacts',

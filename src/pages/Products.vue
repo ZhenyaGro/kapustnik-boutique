@@ -17,10 +17,9 @@
 <script setup lang="ts">
 import { defineComponent } from 'vue';
 import Container from '@/layouts/Container.vue';
-import { pageLinks } from '@/constants/pageLinks';
 import Slider from '@/components/Slider.vue';
 import TextBlock from '@/components/TextBlock.vue';
-import { modelsPhotosUrls } from '@/constants/modelsPhotosUrls';
+import { pageLinks, modelsPhotosUrls } from '@/constants';
 
 defineComponent({
   name: 'Products',

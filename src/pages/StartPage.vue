@@ -16,7 +16,7 @@
 import { defineComponent } from 'vue';
 import Container from '@/layouts/Container.vue';
 import LinesEffect from '@/components/LinesEffect.vue';
-import { pageLinks } from '@/constants/pageLinks';
+import { pageLinks } from '@/constants';
 
 defineComponent({
   name: 'StartPage',

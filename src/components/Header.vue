@@ -1,19 +1,19 @@
 <template>
   <Container :class="['header', { header_hidden: isHeaderHidden && !isMouseNearTop }]">
-    <div class="header__content">
+    <header class="header__content">
       <router-link to="/"><img src="/img/logo/logoWithBigTextWhite.svg" class="logo" alt="Логотип" /></router-link>
       <nav class="navbar">
         <a v-for="(item, index) in pageLinks" :key="index" :href="item.url" class="navbar__link">{{ item.text }}</a>
       </nav>
-      <a class="navbar__link" href="tel:+79212733414">+7&nbsp;(921)&nbsp;273-34-14</a>
-    </div>
+      <a class="navbar__link" :href="`tel:${PHONE_NUMBER.default}`">{{ PHONE_NUMBER.formatted }}</a>
+    </header>
   </Container>
 </template>
 
 <script setup lang="ts">
 import { ref, defineComponent, onMounted, onBeforeUnmount } from 'vue';
 import Container from '@/layouts/Container.vue';
-import { pageLinks } from '@/constants/pageLinks';
+import { pageLinks, PHONE_NUMBER } from '@/constants';
 
 defineComponent({
   name: 'Header',

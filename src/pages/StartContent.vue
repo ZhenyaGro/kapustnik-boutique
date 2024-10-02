@@ -32,7 +32,7 @@
 import { defineComponent } from 'vue';
 import Container from '@/layouts/Container.vue';
 import TextBlock from '@/components/TextBlock.vue';
-import { pageLinks } from '@/constants/pageLinks';
+import { pageLinks } from '@/constants';
 
 defineComponent({
   name: 'StartContent',
