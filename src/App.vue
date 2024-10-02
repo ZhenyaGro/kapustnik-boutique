@@ -2,17 +2,20 @@
   <div class="app-container">
     <Header />
     <router-view />
+    <Footer />
   </div>
 </template>
 
 <script lang="ts" setup>
 import { defineComponent } from 'vue';
-import Header from './components/Header.vue';
+import Header from './layouts/Header.vue';
+import Footer from './layouts/Footer.vue';
 
 defineComponent({
   name: 'ApproveDocument',
   components: {
     Header,
+    Footer,
   },
 });
 </script>
@@ -38,6 +41,7 @@ html {
 
 h1 {
   font-size: 40px;
+  color: white;
 }
 
 .heading {
@@ -48,6 +52,10 @@ h1 {
 a {
   color: white;
   text-decoration: none;
+}
+
+p {
+  color: white;
 }
 
 address {
