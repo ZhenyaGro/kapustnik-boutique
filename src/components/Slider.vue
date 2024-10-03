@@ -123,6 +123,7 @@ onBeforeUnmount(() => {
 
   .slider-wrapper {
     display: flex;
+    justify-content: space-between;
     transition: transform 0.5s ease;
   }
 
@@ -132,8 +133,9 @@ onBeforeUnmount(() => {
 
     img {
       width: 100%;
+      max-width: 660px;
       height: auto;
-      max-height: 800px;
+      margin: 0 auto;
       display: block;
       border-radius: 10px;
     }
