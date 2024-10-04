@@ -42,6 +42,10 @@ html {
 h1 {
   font-size: 40px;
   color: white;
+
+  @media (max-width: 424px) {
+    font-size: 30px;
+  }
 }
 
 .heading {

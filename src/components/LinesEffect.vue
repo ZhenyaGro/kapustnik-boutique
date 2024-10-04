@@ -19,7 +19,9 @@ defineComponent({
 
 <style lang="scss" scoped>
 .line {
+  width: 15%;
   max-width: 200px;
+  min-width: 100px;
   position: absolute;
   animation: floating 4s infinite linear;
   user-select: none;
@@ -54,6 +56,12 @@ defineComponent({
   50% {
     transform: translateX(-2px) translateY(12px) scale(1);
     animation-timing-function: ease-in-out;
+  }
+}
+
+@media (max-width: 424px) {
+  .line {
+    display: none;
   }
 }
 </style>

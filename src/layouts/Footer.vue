@@ -5,7 +5,6 @@
         ИП Капустник Ирина Анатольевна<br />
         <a :href="`tel:${PHONE_NUMBER.default}`">{{ PHONE_NUMBER.formatted }}</a>
       </p>
-      <p><a href="https://t.me/zhenyagro">Разработано @zhenyagro</a></p>
     </footer>
   </Container>
 </template>

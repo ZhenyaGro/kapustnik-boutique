@@ -1,10 +1,10 @@
 <template>
   <Container :id="pageLinks.start.id" class="start-content anchor">
     <div class="start-photos">
-      <a :href="pageLinks.products.url" class="start-photos__link"
+      <a :href="pageLinks.products.url" class="start-photos__link" target="_blank"
         ><img class="start-photos__img start-photos__img_scale" src="/img/photos/model1.jpeg" alt="Фото модель"
       /></a>
-      <a :href="pageLinks.products.url" class="start-photos__link"
+      <a :href="pageLinks.products.url" class="start-photos__link" target="_blank"
         ><img class="start-photos__img start-photos__img_scale" src="/img/photos/model2.jpeg" alt="Фото модель"
       /></a>
       <div class="start-photos__img-container">
@@ -86,6 +86,30 @@ defineComponent({
 
         &_uppercase {
           text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 829px) {
+  .start-content {
+    .start {
+      &-photos {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+
+        &__img-container {
+          grid-column: 1;
+
+          .start-photos__img {
+            display: none;
+          }
+        }
+
+        &__text {
+          position: static;
+          transform: none;
         }
       }
     }

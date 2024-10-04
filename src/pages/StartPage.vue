@@ -5,9 +5,9 @@
       <div class="logo-wrapper">
         <img src="/img/logo/logoWithTextWhite.svg" class="logo-wrapper__logo" alt="Логотип" />
         <h1>Магазин модной женской одежды больших&nbsp;размеров со стразами</h1>
-        <img class="circle circle_left" src="/img/layout/circle_light.svg" alt="Элемент страницы. Круг" />
-        <img class="circle circle_right" src="/img/layout/circle_light.svg" alt="Элемент страницы. Круг" />
       </div>
+      <img class="circle circle_left" src="/img/layout/circle_light.svg" alt="Элемент страницы. Круг" />
+      <img class="circle circle_right" src="/img/layout/circle_light.svg" alt="Элемент страницы. Круг" />
     </section>
   </Container>
 </template>
@@ -42,7 +42,7 @@ defineComponent({
   }
 
   &-content {
-    min-height: calc(100dvh - variables.$headerHeight);
+    min-height: calc(100vh - variables.$headerHeight);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,25 +65,43 @@ defineComponent({
           transform: scale(1.05);
         }
       }
+    }
 
-      .circle {
-        position: absolute;
-        width: 50%;
-        min-width: 350px;
-        max-width: 600px;
+    .circle {
+      position: absolute;
+      width: 30%;
+      min-width: 500px;
+      max-width: 600px;
 
-        &_left {
-          bottom: -35%;
-          left: -10%;
-          animation: 3s showLeftRoll ease;
-          animation-fill-mode: forwards;
+      &_left {
+        bottom: 10%;
+        left: 15%;
+        animation: 3s showLeftRoll ease;
+        animation-fill-mode: forwards;
+
+        @media (max-width: 1999px) {
+          bottom: -10%;
+          left: -15%;
         }
 
-        &_right {
-          top: -35%;
-          right: -10%;
-          animation: 3s showRightRoll ease;
-          animation-fill-mode: forwards;
+        @media (max-width: 794px) {
+          display: none;
+        }
+      }
+
+      &_right {
+        top: 10%;
+        right: 15%;
+        animation: 3s showRightRoll ease;
+        animation-fill-mode: forwards;
+
+        @media (max-width: 1999px) {
+          top: -10%;
+          right: -15%;
+        }
+
+        @media (max-width: 794px) {
+          display: none;
         }
       }
     }

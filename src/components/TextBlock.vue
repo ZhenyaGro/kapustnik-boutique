@@ -23,6 +23,12 @@ defineComponent({
   color: white;
   font-size: 20px;
   @include mixins.backgroundGradientWithLogo(0%, 50%, 300px);
+
+  @media (max-width: 500px) {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 16px;
+  }
 }
 
 // Отступы между абзацами

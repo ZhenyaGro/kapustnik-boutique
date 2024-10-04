@@ -1,43 +1,37 @@
 <template>
-  <Container :id="pageLinks.order.id" class="order anchor">
-    <TextBlock>
-      <h1 class="heading">Как сделать заказ</h1>
-      <ol>
-        <li>Выбрать товары в <a :href="SOCIAL_MEDIA_LINKS.telegram.url">нашем каталоге</a></li>
-        <li>
-          Прислать фото понравившихся вещей, а также ваши параметры: обхват груди, бедер и талии в
-          <a :href="SOCIAL_MEDIA_LINKS.whatsapp.url">whatsapp</a>
-        </li>
-      </ol>
-      <div class="order__container-img">
-        <img class="order__img" src="/img/photos/measurements.jpeg" alt="инструкция как сделать замер" />
-      </div>
-      <div class="order__buy">
-        <img class="order__icon" src="/img/icons/delivery.svg" alt="Доставка по всей россии" />
-        <p>Отправляем заказы по всей России по почте или СДЕК по полной предоплате.</p>
-      </div>
-      <div class="order__buy">
-        <img class="order__icon" src="/img/icons/offlineshopping.svg" alt="Покупки в магазине" />
-        <p>
-          Также можно прийти <a :href="pageLinks.contacts.url">к нам в магазин</a>, выбрать и примерить одежду
-          самостоятельно.
-        </p>
-      </div>
-    </TextBlock>
-  </Container>
+  <TextBlock :id="pageLinks.order.id" class="order anchor">
+    <h1 class="heading">Как сделать заказ</h1>
+    <ol>
+      <li>Выбрать товары в <a :href="SOCIAL_MEDIA_LINKS.telegram.url" target="_blank">нашем каталоге</a></li>
+      <li>
+        Прислать фото понравившихся вещей, а также ваши параметры: обхват груди, бедер и талии в
+        <a :href="SOCIAL_MEDIA_LINKS.whatsapp.url" target="_blank">whatsapp</a>
+      </li>
+    </ol>
+    <div class="order__container-img">
+      <img class="order__img" src="/img/photos/measurements.jpeg" alt="инструкция как сделать замер" />
+    </div>
+    <div class="order__buy">
+      <img class="order__icon" src="/img/icons/delivery.svg" alt="Доставка по всей россии" />
+      <p>Отправляем заказы по всей России по почте или СДЕК по полной предоплате.</p>
+    </div>
+    <div class="order__buy">
+      <img class="order__icon" src="/img/icons/offlineshopping.svg" alt="Покупки в магазине" />
+      <p>
+        Также можно прийти <a :href="pageLinks.contacts.url" target="_blank">к нам в магазин</a>, выбрать и примерить
+        одежду самостоятельно.
+      </p>
+    </div>
+  </TextBlock>
 </template>
 
 <script setup lang="ts">
 import { defineComponent } from 'vue';
-import Container from '@/components/Container.vue';
 import TextBlock from '@/components/TextBlock.vue';
 import { pageLinks, SOCIAL_MEDIA_LINKS } from '@/constants';
 
 defineComponent({
   name: 'HowToOrder',
-  components: {
-    Container,
-  },
 });
 </script>
 
@@ -67,7 +61,8 @@ ol {
     text-align: center;
 
     .order__img {
-      width: 500px;
+      width: 100%;
+      max-width: 500px;
       margin-top: 20px;
       margin-bottom: 20px;
     }

@@ -22,9 +22,14 @@ defineComponent({
   },
 });
 
+const isMobileDevice = ref(false);
 const isHeaderHidden = ref(false);
 const isMouseNearTop = ref(false);
 let lastScrollY = 0;
+
+const checkDeviceType = () => {
+  isMobileDevice.value = window.matchMedia('(hover: none)').matches;
+};
 
 /**
  * Анализирует направление скролла при прокрученной области вниз более чем на 100px для скрытия или показа Header
@@ -45,7 +50,7 @@ const handleScroll = () => {
  * Показывает Header при наведении курсором на верхнюю часть экрана (100px)
  */
 const handleMouseMove = (event: MouseEvent) => {
-  if (event.clientY <= 100) {
+  if (!isMobileDevice.value && event.clientY <= 100) {
     isMouseNearTop.value = true;
   } else {
     isMouseNearTop.value = false;
@@ -53,12 +58,15 @@ const handleMouseMove = (event: MouseEvent) => {
 };
 
 onMounted(() => {
+  checkDeviceType(); // Проверяем тип устройства при монтировании
   window.addEventListener('scroll', handleScroll);
   window.addEventListener('mousemove', handleMouseMove);
+  window.addEventListener('resize', checkDeviceType); // Обновляем тип устройства при изменении окна
 });
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', handleScroll);
   window.removeEventListener('mousemove', handleMouseMove);
+  window.removeEventListener('resize', checkDeviceType);
 });
 </script>
 
@@ -100,9 +108,19 @@ onBeforeUnmount(() => {
         padding: 38px 12px;
         transition: background-color 0.3s;
 
-        &:hover {
+        &:active {
           background-color: colors.$additionalColor;
         }
+
+        @media (hover: hover) {
+          &:hover {
+            background-color: colors.$additionalColor;
+          }
+        }
+      }
+
+      @media (max-width: 949px) {
+        display: none;
       }
     }
   }
