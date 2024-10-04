@@ -61,8 +61,14 @@ defineComponent({
         transition: transform 0.5s;
         z-index: 10;
 
-        &:hover {
+        &:active {
           transform: scale(1.05);
+        }
+
+        @media (hover: hover) {
+          &:hover {
+            transform: scale(1.05);
+          }
         }
       }
     }

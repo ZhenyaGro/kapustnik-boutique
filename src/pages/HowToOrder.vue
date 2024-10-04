@@ -18,8 +18,8 @@
     <div class="order__buy">
       <img class="order__icon" src="/img/icons/offlineshopping.svg" alt="Покупки в магазине" />
       <p>
-        Также можно прийти <a :href="pageLinks.contacts.url" target="_blank">к нам в магазин</a>, выбрать и примерить
-        одежду самостоятельно.
+        Также можно прийти <a :href="pageLinks.contacts.url">к нам в магазин</a>, выбрать и примерить одежду
+        самостоятельно.
       </p>
     </div>
   </TextBlock>
