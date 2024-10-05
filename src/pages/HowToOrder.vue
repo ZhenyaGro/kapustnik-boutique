@@ -9,14 +9,14 @@
       </li>
     </ol>
     <div class="order__container-img">
-      <img class="order__img" src="/img/photos/measurements.jpeg" alt="инструкция как сделать замер" />
+      <img class="order__img" src="img/photos/measurements.jpeg" alt="инструкция как сделать замер" />
     </div>
     <div class="order__buy">
-      <img class="order__icon" src="/img/icons/delivery.svg" alt="Доставка по всей россии" />
+      <img class="order__icon" src="img/icons/delivery.svg" alt="Доставка по всей россии" />
       <p>Отправляем заказы по всей России по почте или СДЕК по полной предоплате.</p>
     </div>
     <div class="order__buy">
-      <img class="order__icon" src="/img/icons/offlineshopping.svg" alt="Покупки в магазине" />
+      <img class="order__icon" src="img/icons/offlineshopping.svg" alt="Покупки в магазине" />
       <p>
         Также можно прийти <a :href="pageLinks.contacts.url">к нам в магазин</a>, выбрать и примерить одежду
         самостоятельно.

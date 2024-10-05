@@ -2,13 +2,13 @@
   <Container :id="pageLinks.start.id" class="start-content anchor">
     <div class="start-photos">
       <a :href="pageLinks.products.url" class="start-photos__link" target="_blank"
-        ><img class="start-photos__img start-photos__img_scale" src="/img/photos/model1.jpeg" alt="Фото модель"
+        ><img class="start-photos__img start-photos__img_scale" src="img/photos/model1.jpeg" alt="Фото модель"
       /></a>
       <a :href="pageLinks.products.url" class="start-photos__link" target="_blank"
-        ><img class="start-photos__img start-photos__img_scale" src="/img/photos/model2.jpeg" alt="Фото модель"
+        ><img class="start-photos__img start-photos__img_scale" src="img/photos/model2.jpeg" alt="Фото модель"
       /></a>
       <div class="start-photos__img-container">
-        <img class="start-photos__img" src="/img/photos/shop.jpg" alt="Интерьер магазина" />
+        <img class="start-photos__img" src="img/photos/shop.jpg" alt="Интерьер магазина" />
         <TextBlock class="start-photos__text"
           ><p class="start-photos__text_uppercase">
             Наш магазин предлагает женскую одежду больших размеров итальянского, турецкого и корейского производства,

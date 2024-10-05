@@ -4,15 +4,15 @@
       <h1 class="heading anchor" :id="pageLinks.brands.id">Бренды</h1>
     </TextBlock>
     <div class="brands">
-      <img src="/img/brands/brand1.jpeg" alt="Бренд" />
-      <img src="/img/brands/brand2.jpeg" alt="Бренд" />
-      <img src="/img/brands/brand3.jpeg" alt="Бренд" />
-      <img src="/img/brands/brand4.jpeg" alt="Бренд" />
-      <img src="/img/brands/brand5.jpeg" alt="Бренд" />
-      <img src="/img/brands/brand6.jpeg" alt="Бренд" />
-      <img src="/img/brands/brand7.jpeg" alt="Бренд" />
-      <img src="/img/brands/brand8.jpeg" alt="Бренд" />
-      <img src="/img/brands/brand9.jpeg" alt="Бренд" />
+      <img src="img/brands/brand1.jpeg" alt="Бренд" />
+      <img src="img/brands/brand2.jpeg" alt="Бренд" />
+      <img src="img/brands/brand3.jpeg" alt="Бренд" />
+      <img src="img/brands/brand4.jpeg" alt="Бренд" />
+      <img src="img/brands/brand5.jpeg" alt="Бренд" />
+      <img src="img/brands/brand6.jpeg" alt="Бренд" />
+      <img src="img/brands/brand7.jpeg" alt="Бренд" />
+      <img src="img/brands/brand8.jpeg" alt="Бренд" />
+      <img src="img/brands/brand9.jpeg" alt="Бренд" />
     </div>
   </div>
 </template>

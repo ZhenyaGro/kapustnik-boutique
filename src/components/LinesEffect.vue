@@ -1,11 +1,6 @@
 <template>
   <div>
-    <img
-      v-for="n in 4"
-      :class="['line', `line_${n}`]"
-      :src="`/img/layout/line${n}.svg`"
-      alt="Элемент страницы. Линия"
-    />
+    <img v-for="n in 4" :class="['line', `line_${n}`]" :src="`img/layout/line${n}.svg`" alt="Элемент страницы. Линия" />
   </div>
 </template>
 
