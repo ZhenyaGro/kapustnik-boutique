@@ -8,10 +8,10 @@
         ><img class="start-photos__img start-photos__img_scale" src="img/photos/model2.jpeg" alt="Фото модель"
       /></a>
       <div class="start-photos__img-container">
-        <img class="start-photos__img" src="img/photos/shop.jpg" alt="Интерьер магазина" />
+        <img class="start-photos__img" src="img/photos/shop.jpg" alt="Интерьер бутика" />
         <TextBlock class="start-photos__text"
           ><p class="start-photos__text_uppercase">
-            Наш магазин предлагает женскую одежду больших размеров итальянского, турецкого и корейского производства,
+            Наш бутик предлагает женскую одежду больших размеров итальянского, турецкого и корейского производства,
             сочетающую в себе комфорт и стиль
           </p>
           <p>

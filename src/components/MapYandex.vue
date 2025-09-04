@@ -11,7 +11,7 @@
     ><a
       href="https://yandex.ru/maps/2/saint-petersburg/category/clothing_store/184107943/?utm_medium=mapframe&utm_source=maps"
       style="color: #eee; font-size: 12px; position: absolute; top: 28px"
-      >Магазин одежды в Санкт‑Петербурге</a
+      >Бутик одежды в Санкт‑Петербурге</a
     >
     <iframe
       src="https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=199574232435"

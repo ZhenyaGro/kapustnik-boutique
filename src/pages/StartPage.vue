@@ -4,7 +4,7 @@
     <section class="main-content">
       <div class="logo-wrapper">
         <img src="img/logo/logoWithTextWhite.svg" class="logo-wrapper__logo" alt="Логотип" />
-        <h1>Магазин модной женской одежды больших&nbsp;размеров со стразами</h1>
+        <h1>Бутик модной женской одежды<br />Больших размеров<br />Со стразами</h1>
       </div>
       <img class="circle circle_left" src="img/layout/circle_light.svg" alt="Элемент страницы. Круг" />
       <img class="circle circle_right" src="img/layout/circle_light.svg" alt="Элемент страницы. Круг" />

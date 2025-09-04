@@ -16,9 +16,9 @@
       <p>Отправляем заказы по всей России по почте или СДЕК по полной предоплате.</p>
     </div>
     <div class="order__buy">
-      <img class="order__icon" src="img/icons/offlineshopping.svg" alt="Покупки в магазине" />
+      <img class="order__icon" src="img/icons/offlineshopping.svg" alt="Покупки в бутике" />
       <p>
-        Также можно прийти <a :href="pageLinks.contacts.url">к нам в магазин</a>, выбрать и примерить одежду
+        Также можно прийти <a :href="pageLinks.contacts.url">к нам в бутик</a>, выбрать и примерить одежду
         самостоятельно.
       </p>
     </div>
