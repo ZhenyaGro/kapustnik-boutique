@@ -32,9 +32,10 @@ export const SOCIAL_MEDIA_LINKS: Record<string, SocialMediaLink> = {
     text: 'Группа Вконтакте',
     imgUrl: 'img/socialMedia/iconVk.png',
   },
-  tiktok: {
-    url: 'https://www.tiktok.com/@kapustnik.butik',
-    text: 'TikTok',
-    imgUrl: 'img/socialMedia/iconTiktok.png',
-  },
+  // Убрано, пока соц-сеть не работает
+  // tiktok: {
+  //   url: 'https://www.tiktok.com/@kapustnik.butik',
+  //   text: 'TikTok',
+  //   imgUrl: 'img/socialMedia/iconTiktok.png',
+  // },
 };
