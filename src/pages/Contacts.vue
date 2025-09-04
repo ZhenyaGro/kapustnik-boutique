@@ -3,18 +3,14 @@
     <h1 class="heading">Контакты</h1>
     <address class="contact-info">
       <p>
-        <a href="https://yandex.ru/maps/-/CDT7iF3Z" target="_blank"
-          ><strong>Адрес: </strong>город Санкт-Петербург, Гражданский проспект, 41<br />
-          ТЦ Академический, 1 этаж, Павильон А56</a
+        <a href="https://yandex.ru/maps/-/CLQQUL2i" target="_blank"
+          ><strong>Адрес: </strong>город Санкт-Петербург, Богословская улица, 4к4</a
         ><br />
-        Метро <span class="subway">Академическая</span><br />
-        <strong>Время работы: </strong>С 10:00 до 22:00 каждый день
+        Метро <span class="subway">Лесная</span><br />
+        <strong>Время работы: </strong>Каждый день по предварительной записи
       </p>
       <p>
         <strong>Телефон: </strong><a :href="`tel:${PHONE_NUMBER.default}`">{{ PHONE_NUMBER.formatted }}</a>
-      </p>
-      <p>
-        <strong>Email: </strong><a :href="`mailto:${EMAIL}`">{{ EMAIL }}</a>
       </p>
     </address>
     <section>

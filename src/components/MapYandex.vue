@@ -12,8 +12,9 @@
       href="https://yandex.ru/maps/2/saint-petersburg/category/clothing_store/184107943/?utm_medium=mapframe&utm_source=maps"
       style="color: #eee; font-size: 12px; position: absolute; top: 28px"
       >Магазин одежды в Санкт‑Петербурге</a
-    ><iframe
-      src="https://yandex.ru/map-widget/v1/org/kapustnik_butik/166263470601/?indoorLevel=1&ll=30.398490%2C60.011821&z=17.13"
+    >
+    <iframe
+      src="https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=199574232435"
       width="100%"
       height="500"
       frameborder="1"
