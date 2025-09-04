@@ -13,7 +13,7 @@
     </div>
     <div class="order__buy">
       <img class="order__icon" src="img/icons/delivery.svg" alt="Доставка по всей россии" />
-      <p>Отправляем заказы по всей России по почте или СДЕК по полной предоплате.</p>
+      <p>Отправляем заказы по всей России по почте или СДЕК по полной оплате.</p>
     </div>
     <div class="order__buy">
       <img class="order__icon" src="img/icons/offlineshopping.svg" alt="Покупки в бутике" />
