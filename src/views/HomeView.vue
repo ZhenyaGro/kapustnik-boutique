@@ -1,11 +1,11 @@
 <template>
   <div class="home">
     <StartPage class="home__page" />
+    <Contacts class="home__page" />
+    <HowToOrder class="home__page" />
     <StartContent class="home__page" />
     <Products class="home__page" />
     <Brands class="home__page" />
-    <HowToOrder class="home__page" />
-    <Contacts class="home__page" />
   </div>
 </template>
 

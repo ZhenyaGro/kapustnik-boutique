@@ -10,6 +10,16 @@ export const pageLinks: Record<string, PageLink> = {
     url: '#top',
     text: 'Главная',
   },
+  contacts: {
+    id: 'contacts',
+    url: '#contacts',
+    text: 'Контакты',
+  },
+  order: {
+    id: 'order',
+    url: '#order',
+    text: 'Как заказать',
+  },
   products: {
     id: 'products',
     url: '#products',
@@ -19,15 +29,5 @@ export const pageLinks: Record<string, PageLink> = {
     id: 'brands',
     url: '#brands',
     text: 'Бренды',
-  },
-  order: {
-    id: 'order',
-    url: '#order',
-    text: 'Как заказать',
-  },
-  contacts: {
-    id: 'contacts',
-    url: '#contacts',
-    text: 'Контакты',
   },
 };
